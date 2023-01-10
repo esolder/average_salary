@@ -4,7 +4,7 @@ BASE_URL = 'https://api.hh.ru/'
 PATH = 'vacancies'
 PAGES = 39
 
-def get_hh_stat():
+def get_hh_stat(headers=None):
     params = {'professional_role': 96,
               'area': 1,
               'period': 30,
