@@ -25,15 +25,15 @@ def predict_salary(salary_from, salary_to):
 
 
 def get_langs_stat(base_url,
-                          path,
-                          params,
-                          pages,
-                          keyword_name,
-                          items_name,
-                          predict_salary_func,
-                          count_name,
-                          langs,
-                          headers=None):
+                   path,
+                   params,
+                   pages,
+                   keyword_name,
+                   items_name,
+                   predict_salary_func,
+                   count_name,
+                   langs,
+                   headers=None):
     langs_stat = {}
 
     for lang in langs:

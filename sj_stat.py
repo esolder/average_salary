@@ -16,15 +16,15 @@ def get_sj_stat(headers):
               'count': MAX_COUNT_PER_PAGE}
 
     return get_langs_stat(BASE_URL,
-                                 PATH,
-                                 params,
-                                 PAGES,
-                                 'keyword',
-                                 'objects',
-                                 predict_rub_salary_sj,
-                                 'total',
-                                 get_langs(),
-                                 headers)
+                          PATH,
+                          params,
+                          PAGES,
+                          'keyword',
+                          'objects',
+                          predict_rub_salary_sj,
+                          'total',
+                          get_langs(),
+                          headers)
 
 
 def predict_rub_salary_sj(vacancy):

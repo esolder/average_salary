@@ -16,14 +16,14 @@ def get_hh_stat(headers=None):
               'per_page': MAX_COUNT_PER_PAGE}
 
     return get_langs_stat(BASE_URL,
-                                 PATH,
-                                 params,
-                                 PAGES,
-                                 'text',
-                                 'items',
-                                 predict_rub_salary_hh,
-                                 'found',
-                                 get_langs())
+                          PATH,
+                          params,
+                          PAGES,
+                          'text',
+                          'items',
+                          predict_rub_salary_hh,
+                          'found',
+                          get_langs())
 
 
 def predict_rub_salary_hh(vacancy):
