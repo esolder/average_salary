@@ -44,13 +44,14 @@ def get_vacancies_by_lang(base_url,
             params['page'] = page + 1
             
             response = get_response(base_url, path, params, headers)
+            response_json = response.json()
 
-            for vacancy in response.json()[items_name]:
+            for vacancy in response_json[items_name]:
                 vacancy_salary = predict_salary_func(vacancy)
                 if vacancy_salary:
                     salaries.append(vacancy_salary)
 
-        langs_stat[lang]['vacancies_found'] = response.json()[count_name]
+        langs_stat[lang]['vacancies_found'] = response_json[count_name]
         salaries_count = len(salaries)
         langs_stat[lang]['vacancies_processed'] = salaries_count
         if salaries_count:
