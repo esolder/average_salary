@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 import os
-from support_funcs import predict_salary, get_vacancies_by_lang
+from support_funcs import predict_salary, get_vacancies_by_lang, get_langs
 
 BASE_URL = 'https://api.superjob.ru/'
 PATH = '2.0/vacancies'
@@ -23,6 +23,7 @@ def get_sj_stat(headers):
                                  'objects',
                                  predict_rub_salary_sj,
                                  'total',
+                                 get_langs(),
                                  headers)
 
 

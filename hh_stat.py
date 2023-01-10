@@ -1,4 +1,4 @@
-from support_funcs import predict_salary, get_vacancies_by_lang
+from support_funcs import predict_salary, get_vacancies_by_lang, get_langs
 
 BASE_URL = 'https://api.hh.ru/'
 PATH = 'vacancies'
@@ -22,7 +22,8 @@ def get_hh_stat(headers=None):
                                  'text',
                                  'items',
                                  predict_rub_salary_hh,
-                                 'found')
+                                 'found',
+                                 get_langs())
 
 
 def predict_rub_salary_hh(vacancy):

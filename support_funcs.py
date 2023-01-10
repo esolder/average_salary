@@ -32,10 +32,11 @@ def get_vacancies_by_lang(base_url,
                           items_name,
                           predict_salary_func,
                           count_name,
+                          langs,
                           headers=None):
     langs_stat = {}
 
-    for lang in get_langs():
+    for lang in langs:
         params[keyword_name] = f'Программист {lang}'
         salaries = []
         langs_stat[lang] = {}
