@@ -9,7 +9,7 @@ import os
 def main():
     load_dotenv()
     headers = {'X-Api-App-Id': os.environ['SUPERJOB_SECRET_KEY']}
-    # print(get_table(safe_connect(get_sj_stat, headers), 'SuperJob Moscow'))
+    print(get_table(safe_connect(get_sj_stat, headers), 'SuperJob Moscow'))
     print(get_table(safe_connect(get_hh_stat), 'HeadHunter Moscow'))
 
 
