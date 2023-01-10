@@ -9,6 +9,7 @@ MOSCOW_ID = 4
 SEARCH_PERIOD = 30
 MAX_COUNT_PER_PAGE = 100
 
+
 def get_sj_stat(headers):
     params = {'town': MOSCOW_ID,
               'period': SEARCH_PERIOD,
@@ -23,7 +24,6 @@ def get_sj_stat(headers):
                                  predict_rub_salary_sj,
                                  'total',
                                  headers)
-
 
 
 def predict_rub_salary_sj(vacancy):

@@ -8,6 +8,7 @@ MOSCOW_ID = 1
 SEARCH_PERIOD = 30
 MAX_COUNT_PER_PAGE = 50
 
+
 def get_hh_stat(headers=None):
     params = {'professional_role': PROGRAMMER_PROF_ID,
               'area': MOSCOW_ID,

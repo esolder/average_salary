@@ -6,6 +6,7 @@ import requests
 from dotenv import load_dotenv
 import os
 
+
 def main():
     load_dotenv()
     headers = {'X-Api-App-Id': os.environ['SUPERJOB_SECRET_KEY']}
@@ -25,18 +26,18 @@ def safe_connect(get_stat_func, headers=None):
 
 def get_table(langs_stat, title):
     table = [('Язык программирования',
-                  'Вакансий найдено',
-                  'Вакансий обработано',
-                  'Средняя зарплата')]
+              'Вакансий найдено',
+              'Вакансий обработано',
+              'Средняя зарплата')]
 
     for language, stat in langs_stat.items():
         table.append([language,
-                           stat['vacancies_found'],
-                           stat['vacancies_processed'],
-                           stat['average_salary']])
-
+                      stat['vacancies_found'],
+                      stat['vacancies_processed'],
+                      stat['average_salary']])
 
     return SingleTable(table, title=title).table
+
 
 if __name__ == '__main__':
     main()
