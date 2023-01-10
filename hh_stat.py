@@ -1,4 +1,4 @@
-from support_funcs import predict_salary, get_vacancies_by_lang, get_langs
+from support_funcs import predict_salary, get_langs_stat, get_langs
 
 BASE_URL = 'https://api.hh.ru/'
 PATH = 'vacancies'
@@ -15,7 +15,7 @@ def get_hh_stat(headers=None):
               'period': SEARCH_PERIOD,
               'per_page': MAX_COUNT_PER_PAGE}
 
-    return get_vacancies_by_lang(BASE_URL,
+    return get_langs_stat(BASE_URL,
                                  PATH,
                                  params,
                                  PAGES,

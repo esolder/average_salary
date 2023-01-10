@@ -24,7 +24,7 @@ def predict_salary(salary_from, salary_to):
         return salary_to * 0.8
 
 
-def get_vacancies_by_lang(base_url,
+def get_langs_stat(base_url,
                           path,
                           params,
                           pages,
