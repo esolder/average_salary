@@ -7,7 +7,6 @@ PATH = '2.0/vacancies'
 PAGES = 5
 
 def get_sj_stat():
-    load_dotenv()
     headers = {'X-Api-App-Id': os.environ['SUPERJOB_SECRET_KEY']}
 
     params = {'town': 4,
@@ -33,4 +32,5 @@ def predict_rub_salary_sj(vacancy):
 
 
 if __name__ == '__main__':
+    load_dotenv()
     print(get_sj_stat())
