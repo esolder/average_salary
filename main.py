@@ -25,11 +25,11 @@ def get_table(langs_stat, title):
                   'Вакансий обработано',
                   'Средняя зарплата')]
 
-    for language, data in langs_stat.items():
+    for language, stat in langs_stat.items():
         table.append([language,
-                           data['vacancies_found'],
-                           data['vacancies_processed'],
-                           data['average_salary']])
+                           stat['vacancies_found'],
+                           stat['vacancies_processed'],
+                           stat['average_salary']])
 
 
     return SingleTable(table, title=title).table
